@@ -27,7 +27,7 @@ from app.main import check_password
         "pass_with_cyrilic_symbols",
     ]
 )
-def test_check_valid_password(password, result) -> None:
+def test_check_valid_password(password: str, result: bool) -> None:
     assert (
         check_password(password) == result
     ), f"Check_password with password={password} should return {result}!"
